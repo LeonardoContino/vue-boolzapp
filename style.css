@@ -79,10 +79,38 @@
     height: calc(100% - 165px)
     
 }
+/* chat */
 
+.message-chat{
+    width: 100%;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+}
+.message{
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    
+}
+.flex-message{
+    display: flex;
+    justify-content: flex-end;
+}
+.my-message{
+    background-color: #D5F9BA ;
+    
+}
+.utent-message{
+    background-color: #FFFFFF;
 
-
-
+}
+.message > p{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+}
 
 
 /* footer */
