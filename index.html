@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container-fluid gradient">
+    <div class="container-fluid gradient" id="root">
       <div class="container d-flex border box row p-0">
 
         <!-- menu-chats -->
@@ -27,8 +27,8 @@
             <!-- nome utente -->
             <div class=" header-chat d-flex bgc-color-h">
               <div class="d-flex p-3 w-50 align-items-center">
-                <img class="img-fluid img-profile" src="img/avatar_io.jpg" alt="">
-                 <span class="ms-2">Nome Utente</span>
+                <img class="img-fluid img-profile" src="img/avatar{{user.avatar}}" alt="">
+                 <span class="ms-2">{{user.name}}</span>
               </div>
               <!-- icone menu -->
               <div class=" d-flex justify-content-end align-items-center w-50 icon-left-header color-icon">
@@ -57,10 +57,7 @@
                   <img class="img-fluid img-profile" src="img/avatar_1.jpg" alt="">
                   <span class="ms-2 utents-name">Nome Utente</span>
                 </div>
-                <div class="col p-3">
-                  <img class="img-fluid img-profile" src="img/avatar_1.jpg" alt="">
-                  <span class="ms-2 utents-name">Nome Utente</span>
-                </div>
+                
                 
               </div>
             </div>
