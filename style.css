@@ -27,7 +27,7 @@
     flex-direction: column;
 }
 .header-chat{
-    height: 85px;
+    height: 80px;
     
 }
 .icon-left-header > *{
@@ -76,7 +76,7 @@
 }
 .bgc-chat{
     background-image: url(img/mine.jpg);
-    height: calc(100% - 165px)
+    height: calc(100% - 160px)
     
 }
 /* chat */
