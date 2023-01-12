@@ -26,8 +26,8 @@
     display: flex;
     flex-direction: column;
 }
-.header-left{
-    height: 100px;
+.header-chat{
+    height: 85px;
     
 }
 .icon-left-header > *{
@@ -65,4 +65,12 @@
 .list-chat{
     height: 100%;
     background-color: white;
+}
+.utents-name{
+    position: absolute;
+}
+
+/* chat-right */
+.bgc-header{
+    background-color: #EAEAEA;
 }
