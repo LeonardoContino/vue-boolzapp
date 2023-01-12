@@ -91,3 +91,10 @@
     width: 100%;
     background-color: #F3EEEA ;
 }
+.icon-footer{
+    font-size: 30px;
+    color: #6B7376;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
