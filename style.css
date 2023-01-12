@@ -74,3 +74,20 @@
 .bgc-header{
     background-color: #EAEAEA;
 }
+.bgc-chat{
+    background-image: url(img/mine.jpg);
+    height: calc(100% - 165px)
+    
+}
+
+
+
+
+
+
+/* footer */
+.footer-chat{
+    height: 80px;
+    width: 100%;
+    background-color: #F3EEEA ;
+}
