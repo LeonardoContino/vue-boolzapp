@@ -27,7 +27,7 @@
             <!-- nome utente -->
             <div class=" header-chat d-flex bgc-color-h">
               <div class="d-flex p-3 w-50 align-items-center">
-                <img class="img-fluid img-profile" src="img/avatar{{user.avatar}}" alt="">
+                <img class="img-fluid img-profile" :src="`img/avatar${user.avatar}.jpg`" alt="">
                  <span class="ms-2">{{user.name}}</span>
               </div>
               <!-- icone menu -->
@@ -53,9 +53,9 @@
             <!-- lista chat -->
             <div class="list-chat overflow-auto">
               <div class="row flex-column m-0">
-                <div class="col p-3">
-                  <img class="img-fluid img-profile" src="img/avatar_1.jpg" alt="">
-                  <span class="ms-2 utents-name">Nome Utente</span>
+                <div class="col p-3 border-chat" v-for="contact in contacts">
+                  <img class="img-fluid img-profile" :src="`img/avatar${contact.avatar}.jpg`" alt="">
+                  <span class="ms-2 utents-name">{{contact.name}}</span>
                 </div>
                 
                 
