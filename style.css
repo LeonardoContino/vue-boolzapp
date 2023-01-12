@@ -1,4 +1,13 @@
 .gradient{
     height: 100vh;
     background:  linear-gradient(#139687 0% 20%, #DBDBD2 20% 100% );
+    display: flex;
+    justify-content: center;
+}
+.box{
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    height: calc(100vh - 40px);
+    
 }
