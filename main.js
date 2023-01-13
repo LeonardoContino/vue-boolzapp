@@ -119,7 +119,11 @@ computed:{
       }
       
       this.currentContact.messages.push(newMessage);
+      
       this.myMessage = '';
+
+      setTimeout(this.setAnswer(), 3000)
+      
       
       
     }
@@ -127,13 +131,14 @@ computed:{
   },
   
  setAnswer(){
-  if(this.addNewMessage){
+  
   const utentMess = {
-    text: utentMessage,
+    text: this.utentMessage,
     status: 'received',
   }
   this.currentContact.messages.push(utentMess);
- }},
+ },
+ 
  
  
 
