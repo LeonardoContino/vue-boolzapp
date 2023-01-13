@@ -7,6 +7,7 @@ const app = Vue.createApp({
           currentIndex: 0,
           myMessage: '',
           utentMessage: 'si',
+          searchWord: '',
             user: {
                 name: 'Leonardo Contino',
                 avatar: '_io'
@@ -103,6 +104,9 @@ computed:{
   },
   currentChat(){
     return this.currentContact.messages;
+  },
+  filteredChat(){
+    return this.contacts.filter(contact => contact.includes(this.searchWord));
   }
 },
  methods:{

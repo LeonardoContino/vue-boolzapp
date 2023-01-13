@@ -48,12 +48,12 @@
             <!--cerca chat -->
             <div class="input-group p-2  search-left">
               <span class="d-flex align-items-center p-2" id="basic-addon1"><i class="bi bi-search"></i></span>
-              <input type="text" class="form-control rounded-3" placeholder="cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+              <input v-model="searchWord" type="text" class="form-control rounded-3" placeholder="cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <!-- lista chat -->
             <div class="list-chat overflow-auto">
               <div class="row flex-column m-0">
-                <div class="col p-3 border-chat" v-for="(contact, i) in contacts" @click="setCurrentIndex(i)">
+                <div class="col p-3 border-chat" v-for="(contact, i) in filteredChat " @click="setCurrentIndex(i)">
                   <img class="img-fluid img-profile" :src="`img/avatar${contact.avatar}.jpg`" alt="">
                   <span class="ms-2 utents-name">{{contact.name}}</span>
                 </div>
