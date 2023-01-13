@@ -118,6 +118,7 @@ computed:{
       this.messages.push(this.newMessage);
       this.myMessage = '';
       
+      
     }
     
   },
