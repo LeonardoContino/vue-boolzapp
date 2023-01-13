@@ -6,7 +6,7 @@ const app = Vue.createApp({
         return {
           currentIndex: 0,
           myMessage: '',
-          utentMessage: 'ok',
+          utentMessage: 'si',
             user: {
                 name: 'Leonardo Contino',
                 avatar: '_io'
@@ -122,7 +122,10 @@ computed:{
       
       this.myMessage = '';
 
-      setTimeout(this.setAnswer(), 3000)
+      setTimeout(()=>{
+        this.setAnswer()
+      },1000)
+      
       
       
       
