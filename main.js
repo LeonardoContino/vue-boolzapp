@@ -106,7 +106,7 @@ computed:{
     return this.currentContact.messages;
   },
   filteredChat(){
-    return this.contacts.filter(contact => contact.includes(this.searchWord));
+    return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchWord));
   }
 },
  methods:{
