@@ -87,7 +87,7 @@
           </div>
           <!-- chat -->
           <div class="bgc-chat overflow-auto pt-5">
-            <div  v-for="message in currentChat" class="message-chat flex-message" :class="message.status">
+            <div  v-for="message in currentChat"  class="message-chat flex-message" :class="message.status">
               <div class="message" >
                 <p>{{message.text}}</p>
                 <time class="date">{{message.date}}</time>
@@ -107,7 +107,7 @@
             </div>
             <div class="col-10 p-0 d-flex align-items-center">
               <div class="input-group">
-                <input type="text" class="form-control" @keyup.enter="addNewMessage"   v-model.trim="myMessage" placeholder="Scrivi un messaggio">
+                <input type="text" class="form-control" @keyup.enter="addNewMessage()"   v-model.trim="myMessage" placeholder="Scrivi un messaggio">
               </div>
             </div>
             <div class="col-1 icon-footer"><i class="bi bi-mic-fill"></i></div>

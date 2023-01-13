@@ -6,6 +6,7 @@ const app = Vue.createApp({
         return {
           currentIndex: 0,
           myMessage: '',
+          utentMessage: '',
             user: {
                 name: 'Leonardo Contino',
                 avatar: '_io'
@@ -113,15 +114,28 @@ computed:{
     if(this.myMessage){
       const newMessage = {
         text: this.myMessage,
-        status: 'sent'
+        status: 'sent',
+        
       }
-      this.messages.push(this.newMessage);
+      
+      this.currentContact.messages.push(newMessage);
       this.myMessage = '';
       
       
     }
     
   },
+  
+ setAnswer(){
+  if(this.addNewMessage){
+  const utentMess = {
+    text: 'ok',
+    status: 'received',
+  }
+  this.currentContact.messages.push(utentMess);
+ }},
+ 
+ 
 
 },
 })
