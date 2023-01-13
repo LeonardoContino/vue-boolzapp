@@ -87,7 +87,7 @@
           </div>
           <!-- chat -->
           <div class="bgc-chat overflow-auto pt-5">
-            <div  v-for="message in currentChat"  class="message-chat flex-message" :class="message.status">
+            <div  v-for="message in currentChat" :="setAnswer"  class="message-chat flex-message" :class="message.status">
               <div class="message" >
                 <p>{{message.text}}</p>
                 <time class="date">{{message.date}}</time>

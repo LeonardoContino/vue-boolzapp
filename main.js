@@ -6,7 +6,7 @@ const app = Vue.createApp({
         return {
           currentIndex: 0,
           myMessage: '',
-          utentMessage: '',
+          utentMessage: 'ok',
             user: {
                 name: 'Leonardo Contino',
                 avatar: '_io'
@@ -129,7 +129,7 @@ computed:{
  setAnswer(){
   if(this.addNewMessage){
   const utentMess = {
-    text: 'ok',
+    text: utentMessage,
     status: 'received',
   }
   this.currentContact.messages.push(utentMess);
