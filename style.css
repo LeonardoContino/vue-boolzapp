@@ -101,21 +101,31 @@
     position: relative
     
 }
+
 .date{
     position: absolute;
-    font-size: 12px;
-    top: 15px;
+    color: rgba(0, 0, 0, 0.506);
+    font-size: 10px;
+    bottom: 2px;
     right: 5px;
 }
 .flex-message{
     display: flex;
+}
+.flex-message.sent{
     justify-content: flex-end;
 }
-.sent{
+
+.flex-message.received{
+    justify-content: flex-start;
+    
+}
+
+.flex-message.sent .message{
     background-color: #D5F9BA ;
     
 }
-.received{
+.flex-message.received .message{
     background-color: #FFFFFF;
 
 }

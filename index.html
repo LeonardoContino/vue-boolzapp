@@ -53,7 +53,7 @@
             <!-- lista chat -->
             <div class="list-chat overflow-auto">
               <div class="row flex-column m-0">
-                <div class="col p-3 border-chat" v-for="contact in contacts">
+                <div class="col p-3 border-chat" v-for="(contact, i) in contacts" @click="setCurrentIndex(i)">
                   <img class="img-fluid img-profile" :src="`img/avatar${contact.avatar}.jpg`" alt="">
                   <span class="ms-2 utents-name">{{contact.name}}</span>
                 </div>
@@ -68,10 +68,10 @@
         <div class=" p-0 col-8 h-100">
           <div class="header-chat bgc-header d-flex align-items-center row m-0">
             <div class="col d-flex align-items-center ">
-              <img class="img-fluid img-profile me-2" src="img/avatar_1.jpg" alt="">
+              <img class="img-fluid img-profile me-2" :src="`img/avatar${currentContact.avatar}.jpg`" alt="">
               <div class="d-flex flex-column p-2">
-                <h5 class="">Nome Utente</h5>
-                <p class="m-0">ultimo accesso</p>
+                <h5 class="">{{currentContact.name}}</h5>
+                <p class="m-0 fw-lighter">ultimo accesso </p>
               </div>
               
             </div>
@@ -87,26 +87,15 @@
           </div>
           <!-- chat -->
           <div class="bgc-chat overflow-auto pt-5">
-            <div class="message-chat flex-message">
-              <div class="message sent">
-                <p>ciao come stai?</p>
-                <p class="date">10.12.13</p>
+            <div  v-for="message in currentChat" class="message-chat flex-message" :class="message.status">
+              <div class="message" >
+                <p>{{message.text}}</p>
+                <time class="date">{{message.date}}</time>
                 
               </div>
-            </div>
-            <div class="message-chat flex-message">
-              <div class="message sent">
-                <p>tutto ok il lavoro?</p>
-                <p class="date">10.12.13</p>
-              </div>
+              <div ></div>
             </div>
             
-            <div class="message-chat">
-              <div class="message received">
-                <p>tutto bene grazie</p>
-                <p class="date">10.12.13</p>
-              </div>
-            </div>
             
 
             
@@ -118,7 +107,7 @@
             </div>
             <div class="col-10 p-0 d-flex align-items-center">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                <input type="text" class="form-control" @keyup.enter="addNewMessage"   v-model.trim="myMessage" placeholder="Scrivi un messaggio">
               </div>
             </div>
             <div class="col-1 icon-footer"><i class="bi bi-mic-fill"></i></div>

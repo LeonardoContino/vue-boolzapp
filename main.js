@@ -4,8 +4,10 @@ const app = Vue.createApp({
 
     data() {
         return {
+          currentIndex: 0,
+          myMessage: '',
             user: {
-                name: 'Nome Utente',
+                name: 'Leonardo Contino',
                 avatar: '_io'
               },
               contacts: [
@@ -91,6 +93,35 @@ const app = Vue.createApp({
               ]
     
         };
+        
 
-}})
+},
+computed:{
+  currentContact(){
+    return this.contacts[this.currentIndex];
+  },
+  currentChat(){
+    return this.currentContact.messages;
+  }
+},
+ methods:{
+  
+  setCurrentIndex(index){
+    this.currentIndex = index;
+  },
+  addNewMessage(){
+    if(this.myMessage){
+      const newMessage = {
+        text: this.myMessage,
+        status: 'sent'
+      }
+      this.messages.push(this.newMessage);
+      this.myMessage = '';
+      
+    }
+    
+  },
+
+},
+})
 app.mount('#root')
