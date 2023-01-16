@@ -105,9 +105,10 @@ computed:{
   currentChat(){
     return this.currentContact.messages;
   },
-  filteredChat(){
-    return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchWord));
-  }
+  // filteredChat(){
+  //   return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchWord));
+    
+  // }
 },
  methods:{
   
@@ -131,8 +132,6 @@ computed:{
       },1000)
       
       
-      
-      
     }
     
   },
@@ -145,6 +144,11 @@ computed:{
   }
   this.currentContact.messages.push(utentMess);
  },
+ filteredChat(){
+  this.contacts.forEach( contact => {
+    contact.visible = contact.name.toLowerCase().includes(this.searchWord.toLowerCase())
+  })
+ }
  
  
  
