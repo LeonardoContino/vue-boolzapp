@@ -1,5 +1,7 @@
 // console.log("js ok");
 
+const DateTime = luxon.DateTime;
+
 const app = Vue.createApp({
 
     data() {
@@ -120,6 +122,7 @@ computed:{
       const newMessage = {
         text: this.myMessage,
         status: 'sent',
+        date: this.getCurrentMoment(),
         
       }
       
@@ -148,6 +151,9 @@ computed:{
   this.contacts.forEach( contact => {
     contact.visible = contact.name.toLowerCase().includes(this.searchWord.toLowerCase())
   })
+ },
+ getCurrentMoment(){
+  return DateTime.now().setLocale('it').toLocaleString(DateTime.TIME_SIMPLE);
  }
  
  

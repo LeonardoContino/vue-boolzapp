@@ -72,7 +72,7 @@
               <img class="img-fluid img-profile me-2" :src="`img/avatar${currentContact.avatar}.jpg`" alt="">
               <div class="d-flex flex-column p-2">
                 <h5 class="">{{currentContact.name}}</h5>
-                <p class="m-0 fw-lighter">ultimo accesso </p>
+                <p class="m-0 fw-lighter">ultimo accesso {{getCurrentMoment()}} </p>
               </div>
               
             </div>
@@ -91,7 +91,7 @@
             <div  v-for="message in currentChat"   class="message-chat flex-message" :class="message.status">
               <div class="message" >
                 <p>{{message.text}}</p>
-                <time class="date">{{message.date}}</time>
+                <time class="date">{{getCurrentMoment()}}</time>
                 
               </div>
               <div ></div>
